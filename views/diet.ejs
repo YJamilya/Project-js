@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Фитнес</title>
+  <title>Диета</title>
   <link rel='stylesheet' href='/stylesheets/style.css'>
 </head>
 <body>
   <h1>Фитнес</h1>
   <div class="ul2">
     <ul>
-      <li><a onclick="index()">Главная</a></li>
-      <li><a onclick="exercises()">Упражнение</a></li>
-      <li><a onclick="stretching()">Растяжка</a></li>
+      <li><a id="index">Главная</a></li>
+      <li><a id="exercises">Упражнение</a></li>
+      <li><a id="stretching">Растяжка</a></li>
     </ul>
   </div>
   <p>Диета  совокупность правил употребления пищи человеком или другим животным. Диета может характеризоваться такими факторами, как химический состав, физические свойства, кулинарная <br>
@@ -42,13 +42,16 @@
 </form>
 
   <script>
-    function exercises() {
-      document.querySelector('[name="exercises"]').click()
-    }
-    function index() {
+     let index = document.querySelector('#index')
+    index.onclick =  function index() {
       document.querySelector('[name="index"]').click()
     }
-    function stretching() {
+    let exercises = document.querySelector('#exercises')
+    exercises.onclick = function exercises() {
+      document.querySelector('[name="exercises"]').click()
+    }
+        let stretching = document.querySelector('#stretching')
+    stretching.onclick = function stretching() {
       document.querySelector('[name="stretching"]').click()
     }
     function download() {

@@ -1,15 +1,19 @@
 body{
-   display: flex;
-    flex-direction: column ;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
   font-size: 22px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- overflow-x: hidden;
+  overflow-x: hidden;
 }
 p{ 
-   margin-top: 60px;
-   
+  margin-top: 60px;
+  
+}
+.highlighted {
+  background-color: rgb(241, 241, 46);
+  color: white;
 }
 h1{ 
     width: 100vw; 
@@ -20,6 +24,7 @@ h1{
     padding: 10px;
 }
 ul { 
+
   list-style-type: none;
   margin: 0;
   padding: 0;

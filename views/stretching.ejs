@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фитнес</title>
+    <title>Растяжка</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
   <h1>Фитнес</h1>
     <div class="ul2">
         <ul>
-          <li><a onclick="index()">Главная</a></li>
-          <li><a onclick="exercises()">Упражнение</a></li>
-          <li><a onclick="diet()">Диета</a></li>
+          <li><a id="index">Главная</a></li>
+          <li><a id="exercises">Упражнение</a></li>
+      <li><a id="diet">Диета</a></li>
         </ul>
       </div>
       <p>1. Повороты головы<br>
         Встаньте прямо, руки на поясе. Начните делать наклоны головы: вправо – вперед – влево – вперед. Выполняйте это упражнение в медленном темпе, не делая резких рывков головой.<br>
-         Сколько: по 10 поворотов вправо и 10 поворотов влево или 30 секунд.
-      </p>
+         Сколько: по 10 поворотов вправо и 10 поворотов влево или 30 секунд.<br>
+         <img src="/images/2.jpg" width="600px ">
+      2.Вращение запястий<br>
+Согните руки в локтях перед собой и сожмите ладони в кулак. Начните вращать кистями по кругу, хорошо разминая запястья. Вращайте сначала в одну сторону, потом <br>
+в обратную (по часовой и против часовой стрелки).<br>
+Сколько: по 10 вращений в каждую сторону (всего 20 вращений) или по 15 секунд на вращение в одну сторону (всего 30 секунд на упражнение).<br>
+<img src="/images/3.jpg" width="600px ">
+3. Наклоны корпуса<br>
+Переходим к разминке корпуса. Положите руки на пояс и начните выполнять наклоны сначала в одну сторону, потом в другую.<br>
+Сколько: по 10 наклонов в каждую сторону (всего 20 наклонов) или 30 секунд на упражнение.
+</p>
       <form action="/exercises" method="post">
         <input type="submit" name="exercises" hidden>
       </form>
@@ -30,13 +39,16 @@
         <input type="submit" name="index" hidden>
       </form>
       <script>
-        function exercises() {
-          document.querySelector('[name="exercises"]').click()
-        }
-        function diet() {
-          document.querySelector('[name="diet"]').click()
-        }
-        function index() {
+        let exercises = document.querySelector('#exercises')
+    exercises.onclick = function exercises() {
+      document.querySelector('[name="exercises"]').click()
+    }
+    let diet = document.querySelector('#diet')
+    diet.onclick = function diet() {
+      document.querySelector('[name="diet"]').click()
+    }
+    let index = document.querySelector('#index')
+    index.onclick =  function index() {
           document.querySelector('[name="index"]').click()
         }
       </script>

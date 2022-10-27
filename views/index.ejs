@@ -8,9 +8,9 @@
   <h1>Фитнес</h1>
   <div class="ul2">
     <ul>
-      <li><a onclick="exercises()">Упражнение</a></li>
-      <li><a onclick="diet()">Диета</a></li>
-      <li><a onclick="stretching()">Растяжка</a></li>
+      <li><a id="exercises">Упражнение</a></li>
+      <li><a id="diet">Диета</a></li>
+      <li><a id="stretching">Растяжка</a></li>
     </ul>
   </div>
   <p>
@@ -29,16 +29,18 @@
     <input type="submit" name="stretching" hidden>
   </form>
   <script>
-    function exercises() {
+    let exercises = document.querySelector('#exercises')
+    exercises.onclick = function exercises() {
       document.querySelector('[name="exercises"]').click()
     }
-    function diet() {
+    let diet = document.querySelector('#diet')
+    diet.onclick = function diet() {
       document.querySelector('[name="diet"]').click()
     }
-    function stretching() {
+    let stretching = document.querySelector('#stretching')
+    stretching.onclick = function stretching() {
       document.querySelector('[name="stretching"]').click()
     }
-    
   </script>
 
 </body>

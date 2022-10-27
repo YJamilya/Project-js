@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Фитнес</title>
+  <title>Упражнения</title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <h1>Упражнения</h1>
+  <h1>Фитнес</h1>
   <div class="ul2">
     <ul>
-      <li><a onclick="index()">Главная</a></li>
-      <li><a onclick="diet()">Диета</a></li>
-      <li><a onclick="stretching()">Растяжка</a></li>
+      <li><a id="index">Главная</a></li>
+       <li><a id="diet">Диета</a></li>
+      <li><a id="stretching">Растяжка</a></li>
     
     </ul>
   </div>
@@ -37,16 +37,18 @@
     <input type="submit" name="stretching" hidden>
   </form>
   <script>
-    function index() {
+    let index = document.querySelector('#index')
+    index.onclick =  function index() {
       document.querySelector('[name="index"]').click()
     }
-    function diet() {
+    let diet = document.querySelector('#diet')
+    diet.onclick = function diet() {
       document.querySelector('[name="diet"]').click()
     }
-    function stretching() {
+        let stretching = document.querySelector('#stretching')
+    stretching.onclick = function stretching() {
       document.querySelector('[name="stretching"]').click()
     }
-  
   </script>
 
 </body>
