@@ -27,7 +27,8 @@
   </form>
   <form action="/stretching" method="post">
     <input type="submit" name="stretching" hidden>
-  </form>      
+  </form>     
+  <p><input type="button" onclick="download()" value="download"></p> 
   <script>
     function exercises() {
       document.querySelector('[name="exercises"]').click()
@@ -37,6 +38,18 @@
     }
     function stretching() {
       document.querySelector('[name="stretching"]').click()
+    }
+    function download() {
+      fetch('./dieta.pdf', {
+          method: 'GET',
+        })
+          .then((response) => response.blob())
+          .then((data) => {
+            let a = document.createElement('a');
+            a.href = window.URL.createObjectURL(data);
+            a.download = 'Diet';
+            a.click();
+          });
     }
   </script>
 </body>
