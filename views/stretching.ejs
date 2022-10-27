@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фитнес</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1>Фитнес</h1>
+    <div class="ul2">
+        <ul>
+          <li><a onclick="index()">Главная</a></li>
+          <li><a onclick="exercises()">Упражнение</a></li>
+          <li><a onclick="diet()">Диета</a></li>
+        </ul>
+      </div>
+      <p>1. Повороты головы<br>
+        Встаньте прямо, руки на поясе. Начните делать наклоны головы: вправо – вперед – влево – вперед. Выполняйте это упражнение в медленном темпе, не делая резких рывков головой.<br>
+         Сколько: по 10 поворотов вправо и 10 поворотов влево или 30 секунд.
+      </p>
+      <form action="/exercises" method="post">
+        <input type="submit" name="exercises" hidden>
+      </form>
+      <form action="/diet" method="post">
+        <input type="submit" name="diet" hidden>
+      </form>
+      <form action="/" method="get">
+        <input type="submit" name="index" hidden>
+      </form>
+      <script>
+        function exercises() {
+          document.querySelector('[name="exercises"]').click()
+        }
+        function diet() {
+          document.querySelector('[name="diet"]').click()
+        }
+        function index() {
+          document.querySelector('[name="index"]').click()
+        }
+      </script>
+    
+</body>
+</html>

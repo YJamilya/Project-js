@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фитнес</title>
+  <link rel='stylesheet' href='/stylesheets/style.css'>
+</head>
+<body>
+  <h1>Фитнес</h1>
+  <div class="ul2">
+    <ul>
+      <li><a onclick="index()">Главная</a></li>
+      <li><a onclick="exercises()">Упражнение</a></li>
+      <li><a onclick="stretching()">Растяжка</a></li>
+    </ul>
+  </div>
+  <form>
+    <input type="submit" name="download" hidden>
+  </form>
+  <form action="/exercises" method="post">
+    <input type="submit" name="exercises" hidden>
+  </form>
+  <form action="/" method="get">
+    <input type="submit" name="index" hidden>
+  </form>
+  <form action="/stretching" method="post">
+    <input type="submit" name="stretching" hidden>
+  </form>      
+  <script>
+    function exercises() {
+      document.querySelector('[name="exercises"]').click()
+    }
+    function index() {
+      document.querySelector('[name="index"]').click()
+    }
+    function stretching() {
+      document.querySelector('[name="stretching"]').click()
+    }
+  </script>
+</body>
+</html>
