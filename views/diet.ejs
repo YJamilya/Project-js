@@ -16,19 +16,31 @@
       <li><a onclick="stretching()">Растяжка</a></li>
     </ul>
   </div>
-  <form>
-    <input type="submit" name="download" hidden>
-  </form>
-  <form action="/exercises" method="post">
-    <input type="submit" name="exercises" hidden>
-  </form>
-  <form action="/" method="get">
-    <input type="submit" name="index" hidden>
-  </form>
-  <form action="/stretching" method="post">
-    <input type="submit" name="stretching" hidden>
-  </form>     
-  <p><input type="button" onclick="download()" value="download"></p> 
+  <p>Диета  совокупность правил употребления пищи человеком или другим животным. Диета может характеризоваться такими факторами, как химический состав, физические свойства, кулинарная <br>
+    обработка еды, а также время и интервалы приёма пищи. Диеты различных культур могут иметь существенные различия и включать или исключать конкретные продукты питания. В популярной <br>
+    культуре, в частности, в популярных книгах, диетой чаще всего называют методы снижения избыточной массы тела. Как правило, такие «диеты» не имеют научного обоснования и придуманы людьми, далёкими от диетологии.<br>
+ Предпочтения в питании и выбор диеты влияют на здоровье человека, а также могут поддерживать организм в оптимальном состоянии. В развитых странах достаток позволяет неограниченное потребление калорий и, вероятно, правильный выбор продуктов питания.<br>
+  Медицинские организации рекомендуют людям поддерживать нормальный вес, ограничивая потребление высококалорийных продуктов и сладких напитков, употребляя растительную пищу, ограничивая потребление красного и обработанного мяса, а также ограничивая потребление алкоголя.
+<input type="button" onclick="download()" value="Download" class="button" ></p> 
+<p>Свяжитесь с нами, если хотите узнать больше.</p>
+<form action="/registration" method="post">
+  <input type="text" name="name" placeholder="Type your name" ><br>
+  <input type="tel" name="phone" placeholder="Type your phone number" >
+  <input type="submit" value="Send" class="button-send">
+</form>
+<form>
+  <input type="submit" name="download" hidden>
+</form>
+<form action="/exercises" method="post">
+  <input type="submit" name="exercises" hidden>
+</form>
+<form action="/" method="get">
+  <input type="submit" name="index" hidden>
+</form>
+<form action="/stretching" method="post">
+  <input type="submit" name="stretching" hidden>
+</form>
+
   <script>
     function exercises() {
       document.querySelector('[name="exercises"]').click()
